@@ -2,6 +2,7 @@
 // Created by michael on 23/01/16.
 //
 
+#include <sstream>
 #include "parser.h"
 
 std::vector<std::string> Parser::Parse() {

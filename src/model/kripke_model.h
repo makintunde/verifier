@@ -15,12 +15,12 @@ class KripkeModel : SpecificModel {
   public:
     KripkeModel(std::vector<std::string> W,
                 std::vector<std::pair<std::string, std::string>> relations,
-                std::unordered_map<std::string, std::unordered_set<std::string>> pi);
+                std::vector<std::pair<std::string, std::vector<std::string>>> pi);
     bool Holds(std::string w, std::string formula);
   private:
     std::vector<std::string> _W;
     std::vector<std::pair<std::string, std::string>> _relations;
-    std::unordered_map<std::string, std::unordered_set<std::string>> _pi;
+    std::vector<std::pair<std::string, std::vector<std::string>>> _pi;
 };
 
 #endif

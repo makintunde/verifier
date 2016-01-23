@@ -10,11 +10,17 @@
 
 class Model {
   public:
-    Model(SpecificModel *specific_model);
+    Model(SpecificModel *specific_model, std::vector<std::string> prop_variables);
 
+    // Returns true if the given formula holds for a given world w.
     bool Holds(std::string w, std::string formula);
+
   private:
+    // An example is a Kripke model.
     SpecificModel* _specific_model;
+
+    // Propositional variables.
+    std::vector<std::string> _prop_variables;
 };
 
 #endif

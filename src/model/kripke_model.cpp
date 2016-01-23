@@ -8,5 +8,5 @@ bool KripkeModel::Holds(std::string w, std::string formula) {
 }
 
 KripkeModel::KripkeModel(std::vector<std::string> W, std::vector<std::pair<std::string, std::string>> relations,
-                         std::unordered_map<std::string, std::unordered_set<std::string>> pi) :
+                         std::vector<std::pair<std::string, std::vector<std::string>>> pi) :
   _W(W), _relations(relations), _pi(pi) {}
