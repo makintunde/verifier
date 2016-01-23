@@ -8,7 +8,6 @@
 #include "model.h"
 
 int main() {
-    //TODO: input.
     int amount = 0;
     std::vector<std::string> prop_variables;
     std::vector<std::string> w;
@@ -42,7 +41,7 @@ int main() {
     for (size_t i = 0; i < prop_variables.size(); ++i) {
         std::cout << "How many valuations for " << prop_variables[i] << "?" << std::endl;
         std::cin >> amount;
-        std::cout << "Define the relations:" << std::endl;
+        std::cout << "Define the valuations for " << prop_variables[i] << ": " << std::endl;
         std::vector<std::string> next_vec;
         for (size_t j = 0; j < amount; ++j) {
             std::string next_str;

@@ -13,6 +13,7 @@ class Model {
     Model(SpecificModel *specific_model, std::vector<std::string> prop_variables);
 
     // Returns true if the given formula holds for a given world w.
+    //TODO: formula should be some sort of parse tree.
     bool Holds(std::string w, std::string formula);
 
   private:
