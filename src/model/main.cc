@@ -51,8 +51,8 @@ int main() {
         pi.push_back(std::make_pair(prop_variables[i], next_vec));
     }
 
-    SpecificModel *specific_model = (SpecificModel *) new KripkeModel(w, relations, pi);
-    Model *model = new Model(specific_model, prop_variables);
+    SpecificModel *specific_model = (SpecificModel *) new KripkeModel();
+    Model *model = new Model(specific_model, prop_variables, w, relations, pi);
     std::string w_new;
     std::string formula;
     std::cout << "Enter the specific world:" << std::endl;
