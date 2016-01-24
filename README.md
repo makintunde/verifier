@@ -1,6 +1,11 @@
 # Verifier
 
-A verifier for logcal formulas.
+A verifier for logical formulas.
+
+# In Progress
+
+Evaluate formulas on [Kripke Models](https://en.wikipedia.org/wiki/Kripke_semantics).
+
 
 # Usage
 
