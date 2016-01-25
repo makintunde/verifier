@@ -1,8 +1,14 @@
-# Verifier
+# Verifier #
 
-A verifier for logcal formulas.
+A verifier for logical formulas.
 
-# Usage
+## In Progress ##
+Verifier is currently work in progress. There are a couple of things to do:
+* Evaluate formulae on [Kripke Models](https://en.wikipedia.org/wiki/Kripke_semantics).
+* Evaluate formulae in [Linear Temporal Logic](https://en.wikipedia.org/wiki/Linear_temporal_logic), which is a modal temporal logic with modalities referring to time.
+
+
+## Usage ##
 
 ```bash
 Define propositional variables:
