@@ -7,7 +7,9 @@
 bool diamond_token::Evaluate(std::string w) {
     for (auto relation : _model->get_relations()) {
         if (relation.first == w) {
-            return _operand->Evaluate(relation.second);
+            if (_operand->Evaluate(relation.second)) {
+                return true;
+            }
         }
     }
     return false;
