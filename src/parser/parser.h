@@ -9,11 +9,11 @@
 #include <vector>
 
 class Parser {
-  public:
+public:
     Parser(std::string to_parse);
     std::vector<std::string> Parse();
 
-  private:
+private:
     std::string _to_parse;
 };
 

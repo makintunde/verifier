@@ -11,9 +11,9 @@
 #define VERIFIER_KRIPKE_MODEL_H
 
 class KripkeModel : SpecificModel {
-  public:
+public:
     bool Holds(std::string w, std::string formula);
-  private:
+
 };
 
 #endif

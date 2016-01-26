@@ -11,8 +11,6 @@ class SpecificModel {
   public:
     virtual bool Holds(std::string w, std::string formula) = 0;
 
-  private:
-
 };
 
 

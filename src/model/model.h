@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <utility>
-#include <unordered_set>
 #include <string>
 #include "specific_model.h"
 
@@ -15,7 +14,7 @@ public:
           std::vector<std::pair<std::string, std::vector<std::string>>> _pi);
 
     // Returns true if the given formula holds for a given world w.
-    //TODO: formula should be some sort of parse tree.
+    //TODO: formula should be some sort of AST.
     bool Holds(std::string w, std::string formula);
 
     const std::vector<std::string> &get_W() const {

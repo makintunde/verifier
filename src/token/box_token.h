@@ -9,10 +9,11 @@
 #include "token.h"
 
 class BoxToken : Token {
-  public:
+public:
     BoxToken(Model *_model, Token *_operand) : Token(_model), _operand(_operand) {}
     bool Evaluate(std::string w);
-  private:
+
+private:
     Token *_operand;
 
 };
