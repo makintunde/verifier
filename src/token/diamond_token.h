@@ -8,14 +8,13 @@
 
 #include "token.h"
 
-class diamond_token {
+class diamond_token : Token {
 public:
-    diamond_token(Token *_operand, Model *_model) : _operand(_operand), _model(_model) { }
+    diamond_token(Token *_operand, Model *_model) : Token(_model), _operand(_operand) { }
     bool Evaluate(std::string w);
 
 private:
     Token *_operand;
-    Model *_model;
 
 };
 
