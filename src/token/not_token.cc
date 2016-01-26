@@ -5,5 +5,5 @@
 #include "not_token.h"
 
 bool not_token::Evaluate(std::string w) {
-    return !(_operand->Evaluatbe(w));
+    return !(_operand->Evaluate(w));
 }
