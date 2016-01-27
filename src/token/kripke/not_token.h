@@ -6,15 +6,15 @@
 #define VERIFIER_NOT_TOKEN_H
 
 
-#include "token.h"
+#include "kripke_token.h"
 
-class not_token : Token {
+class not_token : KripkeToken {
 public:
-    not_token(Token *_operand) : _operand(_operand) { }
+    not_token(KripkeToken *_operand) : _operand(_operand) { }
     bool Evaluate(std::string w);
 
 private:
-    Token *_operand;
+    KripkeToken *_operand;
 
 };
 

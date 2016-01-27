@@ -6,13 +6,14 @@
 #define VERIFIER_ATOM_TOKEN_H
 
 
-#include "token.h"
+#include "kripke_token.h"
+#include "../../model/model.h"
 #include <string>
 #include <vector>
 
-class AtomToken : Token {
+class AtomToken : KripkeToken {
 public:
-    AtomToken(Model *_model, std::string _atom) : Token(_model), _atom(_atom) {}
+    AtomToken(Model *_model, std::string _atom) : KripkeToken(_model), _atom(_atom) {}
     bool Evaluate(std::string w);
 
 private:

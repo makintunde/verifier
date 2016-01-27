@@ -6,15 +6,15 @@
 #define VERIFIER_DIAMOND_TOKEN_H
 
 
-#include "token.h"
+#include "kripke_token.h"
 
-class diamond_token : Token {
+class diamond_token : KripkeToken {
 public:
-    diamond_token(Token *_operand, Model *_model) : Token(_model), _operand(_operand) { }
+    diamond_token(KripkeToken *_operand, Model *_model) : KripkeToken(_model), _operand(_operand) { }
     bool Evaluate(std::string w);
 
 private:
-    Token *_operand;
+    KripkeToken *_operand;
 
 };
 

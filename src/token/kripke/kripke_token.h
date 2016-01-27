@@ -6,12 +6,12 @@
 #define VERIFIER_TOKEN_H
 
 
-#include "../model/model.h"
+#include "../../model/model.h"
 
-class Token {
+class KripkeToken {
 public:
-    Token() { }
-    Token(Model *_model) : _model(_model) { }
+    KripkeToken() { }
+    KripkeToken(Model *_model) : _model(_model) { }
     virtual bool Evaluate(std::string w) = 0;
 
 protected:

@@ -6,15 +6,15 @@
 #define VERIFIER_BOX_TOKEN_H
 
 
-#include "token.h"
+#include "kripke_token.h"
 
-class BoxToken : Token {
+class BoxToken : KripkeToken {
 public:
-    BoxToken(Model *_model, Token *_operand) : Token(_model), _operand(_operand) {}
+    BoxToken(Model *_model, KripkeToken *_operand) : KripkeToken(_model), _operand(_operand) {}
     bool Evaluate(std::string w);
 
 private:
-    Token *_operand;
+    KripkeToken *_operand;
 
 };
 
