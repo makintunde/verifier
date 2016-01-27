@@ -8,10 +8,10 @@
 
 #include "kripke_token.h"
 
-class BoxToken : KripkeToken {
+class BoxToken : public KripkeToken {
 public:
     BoxToken(Model *_model, KripkeToken *_operand) : KripkeToken(_model), _operand(_operand) {}
-    bool Evaluate(std::string w);
+    virtual bool Evaluate(std::string w);
 
 private:
     KripkeToken *_operand;

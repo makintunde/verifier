@@ -11,10 +11,10 @@
 #include <string>
 #include <vector>
 
-class AtomToken : KripkeToken {
+class AtomToken : public KripkeToken {
 public:
     AtomToken(Model *_model, std::string _atom) : KripkeToken(_model), _atom(_atom) {}
-    bool Evaluate(std::string w);
+    virtual bool Evaluate(std::string w);
 
 private:
     std::string _atom;

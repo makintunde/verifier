@@ -4,6 +4,6 @@
 
 #include "not_token.h"
 
-bool not_token::Evaluate(std::string w) {
+bool NotToken::Evaluate(std::string w) {
     return !(_operand->Evaluate(w));
 }

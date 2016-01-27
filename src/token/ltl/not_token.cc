@@ -4,6 +4,6 @@
 
 #include "not_token.h"
 
-bool NotToken::Evaluate() {
-    return !(_operand->Evaluate());
+bool NotToken::Evaluate(Path *path) {
+    return !(_operand->Evaluate(path));
 }

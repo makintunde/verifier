@@ -8,11 +8,11 @@
 
 #include "token.h"
 
-class and_token : LtlToken {
+class AndToken : public LtlToken {
 public:
-    and_token(Path *_path, Model _model, Token *_l_operand, Token *_r_operand) :
+    AndToken(Path *_path, Model _model, Token *_l_operand, Token *_r_operand) :
             LtlToken(_path, _model), _l_operand(_l_operand), _r_operand(_r_operand) { }
-    bool Evaluate();
+    virtual bool Evaluate(Path *path);
 private:
     LtlToken *_l_operand, *_r_operand;
 

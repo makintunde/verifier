@@ -4,7 +4,7 @@
 
 #include "diamond_token.h"
 
-bool diamond_token::Evaluate(std::string w) {
+bool DiamondToken::Evaluate(std::string w) {
     for (auto relation : _model->get_relations()) {
         if (relation.first == w) {
             if (_operand->Evaluate(relation.second)) {

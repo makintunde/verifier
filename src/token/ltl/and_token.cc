@@ -4,6 +4,6 @@
 
 #include "and_token.h"
 
-bool and_token::Evaluate() {
-    return _l_operand->Evaluate() && _r_operand->Evaluate();
+bool AndToken::Evaluate(Path *path) {
+    return _l_operand->Evaluate(path) && _r_operand->Evaluate(path);
 }

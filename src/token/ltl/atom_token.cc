@@ -5,8 +5,8 @@
 #include "atom_token.h"
 #include <algorithm>
 
-bool AtomToken::Evaluate() {
-    std::vector<std::string> start = _path->GetSubPath(0);
+bool AtomToken::Evaluate(Path *path) {
+    std::vector<std::string> start = path->GetSubPath(0);
     std::vector<std::pair<std::string, std::vector<std::string>>> pi = _model->get_pi();
     auto it = find_if( _pi.begin(), _pi.end(), [&](const std::pair<std::string, std::vector<std::string>>& element) {
         return _atom == element.first;

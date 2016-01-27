@@ -8,10 +8,10 @@
 
 #include "kripke_token.h"
 
-class not_token : KripkeToken {
+class NotToken : public KripkeToken {
 public:
-    not_token(KripkeToken *_operand) : _operand(_operand) { }
-    bool Evaluate(std::string w);
+    NotToken(KripkeToken *_operand) : _operand(_operand) { }
+    virtual bool Evaluate(std::string w);
 
 private:
     KripkeToken *_operand;

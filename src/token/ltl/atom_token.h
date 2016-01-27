@@ -10,10 +10,10 @@
 #include <string>
 #include <vector>
 
-class AtomToken : LtlToken {
+class AtomToken : public LtlToken {
 public:
     AtomToken(Model *_model, std::string _atom, Path _path) : LtlToken(_path, _model), _atom(_atom) {}
-    bool Evaluate();
+    virtual bool Evaluate(Path *path);
 
 private:
     std::string _atom;

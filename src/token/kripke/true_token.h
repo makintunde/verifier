@@ -6,10 +6,11 @@
 #define VERIFIER_TRUE_TOKEN_H
 
 #include <string>
+#include "kripke_token.h"
 
-class TrueToken {
+class TrueToken : public KripkeToken {
 public:
-    bool Evaluate(std::string w);
+    virtual bool Evaluate(std::string w);
 
 };
 

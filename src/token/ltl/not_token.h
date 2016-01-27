@@ -8,10 +8,10 @@
 
 #include "token.h"
 
-class NotToken : Token {
+class NotToken : public LtlToken {
 public:
     NotToken(LtlToken *_operand) : _operand(_operand) { }
-    bool Evaluate();
+    virtual bool Evaluate(Path *path);
 
 private:
     LtlToken *_operand;

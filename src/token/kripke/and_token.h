@@ -8,10 +8,10 @@
 
 #include "kripke_token.h"
 
-class and_token : KripkeToken {
+class AndToken : public KripkeToken {
 public:
-    and_token(KripkeToken *_l_operand, KripkeToken *_r_operand) : _l_operand(_l_operand), _r_operand(_r_operand) { }
-    bool Evaluate(std::string w);
+    AndToken(KripkeToken *_l_operand, KripkeToken *_r_operand) : _l_operand(_l_operand), _r_operand(_r_operand) { }
+    virtual bool Evaluate(std::string w);
 private:
     KripkeToken *_l_operand, *_r_operand;
 

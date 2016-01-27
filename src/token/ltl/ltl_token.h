@@ -12,7 +12,7 @@
 class LtlToken {
 public:
     LtlToken(Path *_path, Model *_model) : _path(_path), _model(_model) { }
-    virtual bool Evaluate() = 0;
+    virtual bool Evaluate(Path *path) = 0;
 
 protected:
     Path *_path;

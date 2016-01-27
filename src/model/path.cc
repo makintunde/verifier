@@ -11,3 +11,7 @@ std::vector<std::string> Path::GetSubPath(size_t index) {
     }
     return ret;
 }
+
+size_t Path::GetSize() {
+    return _states.size();
+}
