@@ -5,5 +5,5 @@
 #include "and_token.h"
 
 bool AndToken::Evaluate(std::string w) {
-    return _l_operand->Evaluate(w) && _r_operand->Evaluate(w);
+    return _operand_1->Evaluate(w) && _r_operand->Evaluate(w);
 }

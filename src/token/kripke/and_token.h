@@ -10,10 +10,10 @@
 
 class AndToken : public KripkeToken {
 public:
-    AndToken(KripkeToken *_l_operand, KripkeToken *_r_operand) : _l_operand(_l_operand), _r_operand(_r_operand) { }
+    AndToken(KripkeToken *_l_operand, KripkeToken *_r_operand) : _operand_1(_l_operand), _r_operand(_r_operand) { }
     virtual bool Evaluate(std::string w);
 private:
-    KripkeToken *_l_operand, *_r_operand;
+    KripkeToken *_operand_1, *_r_operand;
 
 };
 
