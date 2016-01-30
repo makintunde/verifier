@@ -11,13 +11,17 @@
 class OrToken : public LtlToken {
 
 public:
-    virtual bool Evaluate(Path *path);
+    OrToken(std::shared_ptr<Path> _path, std::shared_ptr<Model> _model,
+            std::shared_ptr<LtlToken> _operand_1,
+            std::shared_ptr<LtlToken> _operand_2) :
+            LtlToken(_path, _model),
+            _operand_1(_operand_1),
+            _operand_2(_operand_2) { }
 
-    OrToken(Path *_path, Model *_model, LtlToken *_operand_1, LtlToken *_operand_2) :
-            LtlToken(_path, _model), _operand_1(_operand_1), _operand_2(_operand_2) { }
+    virtual bool Evaluate(std::shared_ptr<Path> path);
 
 private:
-    LtlToken *_operand_1, *_operand_2;
+    std::shared_ptr<LtlToken> _operand_1, _operand_2;
 };
 
 

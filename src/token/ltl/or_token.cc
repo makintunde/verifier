@@ -4,6 +4,6 @@
 
 #include "or_token.h"
 
-bool OrToken::Evaluate(Path *path) {
+bool OrToken::Evaluate(std::shared_ptr<Path> path) {
     return _operand_1->Evaluate(path) || _operand_2->Evaluate(path);
 }

@@ -4,6 +4,6 @@
 
 #include "not_token.h"
 
-bool NotToken::Evaluate(Path *path) {
+bool NotToken::Evaluate(std::shared_ptr<Path> path) {
     return !(_operand->Evaluate(path));
 }

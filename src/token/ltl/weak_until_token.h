@@ -11,13 +11,17 @@
 class WeakUntilToken : public LtlToken {
 
 public:
-    virtual bool Evaluate(Path *path);
+    virtual bool Evaluate(std::shared_ptr<Path> path);
 
-    WeakUntilToken(Path *_path, Model *_model, LtlToken *_operand_1, LtlToken *_operand_2) :
-            LtlToken(_path, _model), _operand_1(_operand_1), _operand_2(_operand_2) { }
+    WeakUntilToken(std::shared_ptr<Path> _path, std::shared_ptr<Model> _model,
+                   std::shared_ptr<LtlToken> _operand_1,
+                   std::shared_ptr<LtlToken> _operand_2) :
+            LtlToken(_path, _model),
+            _operand_1(_operand_1),
+            _operand_2(_operand_2) { }
 
 private:
-    LtlToken *_operand_1, *_operand_2;
+    std::shared_ptr<LtlToken> _operand_1, _operand_2;
 };
 
 

@@ -4,7 +4,7 @@
 
 #include "next_token.h"
 
-bool NextToken::Evaluate(Path *path) {
-    Path *next_path = new Path(path->GetSubPath(1));
+bool NextToken::Evaluate(std::shared_ptr<Path> path) {
+    std::shared_ptr<Path> next_path(new Path(path->GetSubPath(1)));
     return _operand->Evaluate(next_path);
 }

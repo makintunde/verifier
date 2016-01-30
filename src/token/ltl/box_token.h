@@ -9,18 +9,20 @@
 #include "ltl_token.h"
 
 /**
- *  The modal box [ ] is written as G representing "forever in
- *   the future".
+ *  The modal box [ ] is written as G representing "forever in the future".
  */
 class BoxToken : public LtlToken {
 
 public:
-    virtual bool Evaluate(Path *path);
+    virtual bool Evaluate(std::shared_ptr<Path> path);
 
-    BoxToken(Path *_path, Model *_model) : LtlToken(_path, _model) { }
+    BoxToken(std::shared_ptr<Path> _path, std::shared_ptr<Model> _model,
+             std::shared_ptr<LtlToken> _operand)
+            : LtlToken(_path, _model),
+              _operand(_operand) { }
 
 private:
-    LtlToken *_operand;
+    std::shared_ptr<LtlToken> _operand;
 };
 
 

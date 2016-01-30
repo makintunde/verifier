@@ -10,11 +10,11 @@
 
 class NotToken : public LtlToken {
 public:
-    NotToken(LtlToken *_operand) : _operand(_operand) { }
-    virtual bool Evaluate(Path *path);
+    NotToken(std::shared_ptr<LtlToken> _operand) : _operand(_operand) { }
+    virtual bool Evaluate(std::shared_ptr<Path> path);
 
 private:
-    LtlToken *_operand;
+    std::shared_ptr<LtlToken> _operand;
 
 };
 

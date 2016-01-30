@@ -11,12 +11,14 @@
 class NextToken : public LtlToken {
 
 public:
-    virtual bool Evaluate(Path *path);
+    virtual bool Evaluate(std::shared_ptr<Path> path);
 
-    NextToken(Path *_path, Model *_model, LtlToken *_operand) : LtlToken(_path, _model), _operand(_operand) { }
+    NextToken(std::shared_ptr<Path> _path, std::shared_ptr<Model> _model,
+              std::shared_ptr<LtlToken> _operand)
+            : LtlToken(_path, _model), _operand(_operand) { }
 
 private:
-    LtlToken *_operand;
+    std::shared_ptr<LtlToken> _operand;
 };
 
 
