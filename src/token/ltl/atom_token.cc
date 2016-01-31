@@ -5,7 +5,7 @@
 #include "atom_token.h"
 #include <algorithm>
 
-bool AtomToken::Evaluate(Path *path) {
+bool AtomToken::Evaluate(std::shared_ptr<Path> path) {
     std::vector<std::string> start = path->GetSubPath(0);
     std::vector<std::pair<std::string, std::vector<std::string>>> pi
             = _model->get_pi();
