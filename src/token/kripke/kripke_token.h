@@ -7,15 +7,16 @@
 
 
 #include "../../model/model.h"
+#include <memory>
 
 class KripkeToken {
 public:
     KripkeToken() { }
-    KripkeToken(Model *_model) : _model(_model) { }
+    KripkeToken(std::shared_ptr<Model> _model) : _model(_model) { }
     virtual bool Evaluate(std::string w) = 0;
 
 protected:
-    Model *_model;
+    std::shared_ptr<Model> _model;
 };
 
 

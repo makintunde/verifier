@@ -13,7 +13,8 @@
 
 class AtomToken : public KripkeToken {
 public:
-    AtomToken(Model *_model, std::string _atom) : KripkeToken(_model), _atom(_atom) {}
+    AtomToken(std::shared_ptr<Model> _model, std::string _atom)
+            : KripkeToken(_model), _atom(_atom) {}
     virtual bool Evaluate(std::string w);
 
 private:

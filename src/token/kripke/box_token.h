@@ -10,11 +10,13 @@
 
 class BoxToken : public KripkeToken {
 public:
-    BoxToken(Model *_model, KripkeToken *_operand) : KripkeToken(_model), _operand(_operand) {}
+    BoxToken(std::shared_ptr<Model> _model,
+             std::shared_ptr<KripkeToken> _operand) :
+            KripkeToken(_model), _operand(_operand) {}
     virtual bool Evaluate(std::string w);
 
 private:
-    KripkeToken *_operand;
+    std::shared_ptr<KripkeToken> _operand;
 
 };
 

@@ -10,11 +10,11 @@
 
 class NotToken : public KripkeToken {
 public:
-    NotToken(KripkeToken *_operand) : _operand(_operand) { }
+    NotToken(std::shared_ptr<KripkeToken> _operand) : _operand(_operand) { }
     virtual bool Evaluate(std::string w);
 
 private:
-    KripkeToken *_operand;
+    std::shared_ptr<KripkeToken> _operand;
 
 };
 

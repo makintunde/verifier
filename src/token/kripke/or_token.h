@@ -11,13 +11,14 @@
 class OrToken : public KripkeToken {
 
 public:
-    OrToken(KripkeToken *_operand_1, KripkeToken *_operand_2)
+    OrToken(std::shared_ptr<KripkeToken> _operand_1,
+            std::shared_ptr<KripkeToken> _operand_2)
             : _operand_1(_operand_1), _operand_2(_operand_2) { }
 
     virtual bool Evaluate(std::string w);
 
 private:
-    KripkeToken *_operand_1, *_operand_2;
+    std::shared_ptr<KripkeToken> _operand_1, _operand_2;
 };
 
 

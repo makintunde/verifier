@@ -10,11 +10,13 @@
 
 class DiamondToken : public KripkeToken {
 public:
-    DiamondToken(KripkeToken *_operand, Model *_model) : KripkeToken(_model), _operand(_operand) { }
+    DiamondToken(std::shared_ptr<KripkeToken> _operand,
+                 std::shared_ptr<Model> _model) :
+            KripkeToken(_model), _operand(_operand) { }
     virtual bool Evaluate(std::string w);
 
 private:
-    KripkeToken *_operand;
+    std::shared_ptr<KripkeToken> _operand;
 
 };
 
